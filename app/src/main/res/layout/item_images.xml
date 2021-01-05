@@ -13,9 +13,9 @@
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:onClick="click_movie_details"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
+    <!--        android:onClick="click_movie_details"-->
     <TextView
         android:id="@+id/image_title"
         android:layout_width="match_parent"

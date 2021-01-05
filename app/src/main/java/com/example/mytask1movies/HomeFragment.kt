@@ -1,22 +1,24 @@
 package com.example.mytask1movies
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mytask1movies.adapters.ImageAdapter
 import com.example.mytask1movies.adapters.TimelineImageAdapter
 
-class MainFragment : Fragment() {
+class HomeFragment : Fragment() {
 
 
+    lateinit var v : View
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,7 +27,7 @@ class MainFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val v : View = inflater.inflate(R.layout.fragment_main, container, false)
+        v = inflater.inflate(R.layout.fragment_home, container, false)
 
         val radio= v.findViewById<RadioGroup>(R.id.radioGroup)
         radio.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
@@ -109,7 +111,19 @@ class MainFragment : Fragment() {
         RecyclerView2.adapter = context?.let { ImageAdapter(it, grid_images) }
 //        RecyclerView2.adapter = ImageAdapter(this, grid_images)
 
+
+
         return v
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+
+        val button = v.findViewById<Button>(R.id.btn_test)
+        button.setOnClickListener{
+            findNavController().navigate(R.id.action_homeFragment_to_movieDetailFragment)
+        }
+
     }
 
 

@@ -198,8 +198,7 @@
                         android:text="5:15PM/Rs.800/- 3D(family)"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:backgroundTint="@color/button_background_color"
-                        android:onClick="click_movie_ticket_book_me"/>
+                        android:backgroundTint="@color/button_background_color" />
 
                     <Button
                         android:id="@+id/cinema1_button2"
@@ -209,8 +208,7 @@
                         android:text="9:00PM/Rs.800/- 2D(family)"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:backgroundTint="@color/button_background_color"
-                        android:onClick="click_movie_ticket_book_me"/>
+                        android:backgroundTint="@color/button_background_color" />
 
 
                 </LinearLayout>
@@ -246,8 +244,7 @@
                         android:text="5:15PM/Rs.800/- 3D(family)"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:backgroundTint="@color/button_background_color"
-                        android:onClick="click_movie_ticket_book_me"/>
+                        android:backgroundTint="@color/button_background_color" />
 
                     <Button
                         android:id="@+id/cinema2_button2"
@@ -257,8 +254,7 @@
                         android:text="9:00PM/Rs.800/- 2D(family)"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:backgroundTint="@color/button_background_color"
-                        android:onClick="click_movie_ticket_book_me"/>
+                        android:backgroundTint="@color/button_background_color" />
 
 
                 </LinearLayout>
@@ -276,8 +272,7 @@
                         android:text="5:15PM/Rs.800/- 3D(family)"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:backgroundTint="@color/button_background_color"
-                        android:onClick="click_movie_ticket_book_me"/>
+                        android:backgroundTint="@color/button_background_color" />
 
                     <Button
                         android:id="@+id/cinema2_button4"
@@ -287,8 +282,7 @@
                         android:text="9:00PM/Rs.800/- 2D(family)"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:backgroundTint="@color/button_background_color"
-                        android:onClick="click_movie_ticket_book_me"/>
+                        android:backgroundTint="@color/button_background_color" />
 
 
                 </LinearLayout>

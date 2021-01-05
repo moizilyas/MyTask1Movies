@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment"
+    tools:context=".HomeFragment"
     android:layout_marginTop="10dp"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical">
@@ -61,6 +61,12 @@
             android:layout_marginTop="10dp"/>
 
 
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Button"
+            android:backgroundTint="@color/green"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RecyclerView2"
             android:layout_width="match_parent"
@@ -71,6 +77,7 @@
 
 
     </LinearLayout>
+
 
 
 </FrameLayout>

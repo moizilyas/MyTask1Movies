@@ -15,12 +15,14 @@
         app:cardElevation="0dp">
 
         <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:id="@+id/timeline_image"
-            android:onClick="click_movie_details"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+            android:id="@+id/timeline_image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <!--            android:onClick="click_movie_details"-->
+
+
 
     </androidx.cardview.widget.CardView>
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/test_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mytask1movies.HomeFragment"
+        android:label="Movies Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.example.mytask1movies.MovieDetailFragment"
+        android:label="Movie Details"
+        tools:layout="@layout/fragment_movie_detail" >
+        <action
+            android:id="@+id/action_movieDetailFragment_to_movieTicketBookMeFragment"
+            app:destination="@id/movieTicketBookMeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieTicketBookMeFragment"
+        android:name="com.example.mytask1movies.MovieTicketBookMeFragment"
+        android:label="Movie Ticket"
+        tools:layout="@layout/fragment_movie_ticket_book_me" />
+</navigation>
