@@ -27,5 +27,16 @@
         android:id="@+id/movieTicketBookMeFragment"
         android:name="com.example.mytask1movies.MovieTicketBookMeFragment"
         android:label="Movie Ticket"
-        tools:layout="@layout/fragment_movie_ticket_book_me" />
+        tools:layout="@layout/fragment_movie_ticket_book_me" >
+        <argument
+            android:name="bookingDetails"
+            app:argType="com.example.mytask1movies.Details" />
+        <argument
+            android:name="city_name"
+            app:argType="string"
+            android:defaultValue="Islamabad" />
+        <argument android:name="movie_name"
+            app:argType="string"
+            android:defaultValue="Movie Title" />
+    </fragment>
 </navigation>
