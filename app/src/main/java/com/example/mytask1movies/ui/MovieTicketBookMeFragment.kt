@@ -1,4 +1,4 @@
-package com.example.mytask1movies
+package com.example.mytask1movies.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
+import com.example.mytask1movies.ui.MovieTicketBookMeFragmentArgs
+import com.example.mytask1movies.R
 import kotlinx.android.synthetic.main.fragment_movie_ticket_book_me.*
 
 

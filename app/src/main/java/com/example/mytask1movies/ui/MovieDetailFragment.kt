@@ -1,4 +1,4 @@
-package com.example.mytask1movies
+package com.example.mytask1movies.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
+import com.example.mytask1movies.Details
 import com.example.mytask1movies.R
 
 
@@ -77,7 +78,7 @@ class MovieDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
             val details = Details(city_name, movie_name as String)
 
-            val action : NavDirections  = MovieDetailFragmentDirections.actionMovieDetailFragmentToMovieTicketBookMeFragment(details, "Islamabad","Movie Title")
+            val action : NavDirections  = MovieDetailFragmentDirections.actionMovieDetailFragmentToMovieTicketBookMeFragment(details, "Islamabad", "Movie Title")
 
             findNavController().navigate(action)
         }

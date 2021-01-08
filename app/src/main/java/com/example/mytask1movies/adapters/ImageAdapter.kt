@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mytask1movies.Image
+import com.example.mytask1movies.data.model.Image
 import com.example.mytask1movies.R
 
 class ImageAdapter(

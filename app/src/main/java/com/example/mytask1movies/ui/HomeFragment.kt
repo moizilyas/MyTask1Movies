@@ -1,4 +1,4 @@
-package com.example.mytask1movies
+package com.example.mytask1movies.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,8 +12,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mytask1movies.R
 import com.example.mytask1movies.adapters.ImageAdapter
 import com.example.mytask1movies.adapters.TimelineImageAdapter
+import com.example.mytask1movies.data.model.Image
 
 class HomeFragment : Fragment() {
 

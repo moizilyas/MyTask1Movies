@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieTicketBookMeFragment"
+    tools:context=".ui.MovieTicketBookMeFragment"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -372,7 +372,7 @@
             android:id="@+id/book_me"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2.7"
+            android:layout_weight="2.4"
             android:text="BOOK ME"
             android:backgroundTint="@color/yellow"
             android:textColor="@color/black"

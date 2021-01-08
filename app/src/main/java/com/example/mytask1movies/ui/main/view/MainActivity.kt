@@ -1,16 +1,16 @@
-package com.example.mytask1movies
+package com.example.mytask1movies.ui.main.view
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.mytask1movies.ui.HomeFragment
+import com.example.mytask1movies.R
 
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var mainfragment : HomeFragment
+//    lateinit var mainfragment : HomeFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
