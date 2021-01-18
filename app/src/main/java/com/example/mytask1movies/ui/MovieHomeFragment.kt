@@ -16,11 +16,13 @@ import com.example.mytask1movies.R
 import com.example.mytask1movies.adapters.ImageAdapter
 import com.example.mytask1movies.adapters.TimelineImageAdapter
 import com.example.mytask1movies.data.model.Image
+import com.example.mytask1movies.databinding.FragmentMovieHomeBinding
 
 class MovieHomeFragment : Fragment() {
 
 
-    lateinit var v : View
+    private lateinit var binding: FragmentMovieHomeBinding
+//    lateinit var v : View
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,9 +31,11 @@ class MovieHomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        v = inflater.inflate(R.layout.fragment_movie_home, container, false)
+        binding = FragmentMovieHomeBinding.inflate(inflater, container, false)
+//        v = inflater.inflate(R.layout.fragment_movie_home, container, false)
 
-        val radio= v.findViewById<RadioGroup>(R.id.radioGroup)
+        val radio= binding.radioGroup
+//        val radio= v.findViewById<RadioGroup>(R.id.radioGroup)
         radio.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
             when (checkedId) {
                 R.id.now_showing -> {
@@ -75,10 +79,10 @@ class MovieHomeFragment : Fragment() {
         )
 
 
-        val RecyclerView1 = v.findViewById<RecyclerView>(R.id.RecyclerView1)
+        val RecyclerView1 = binding.RecyclerView1
+//        val RecyclerView1 = v.findViewById<RecyclerView>(R.id.RecyclerView1)
 
-        RecyclerView1.layoutManager = LinearLayoutManager(
-            activity,
+        RecyclerView1.layoutManager = LinearLayoutManager(activity,
             LinearLayoutManager.HORIZONTAL,
             false
         )
@@ -105,7 +109,8 @@ class MovieHomeFragment : Fragment() {
 
         )
 
-        val RecyclerView2 = v.findViewById<RecyclerView>(R.id.RecyclerView2)
+        val RecyclerView2 = binding.RecyclerView2
+//        val RecyclerView2 = v.findViewById<RecyclerView>(R.id.RecyclerView2)
 
         RecyclerView2.layoutManager = GridLayoutManager(activity, 3)
 //        RecyclerView2.layoutManager = LinearLayoutManager(this)
@@ -114,14 +119,14 @@ class MovieHomeFragment : Fragment() {
 //        RecyclerView2.adapter = ImageAdapter(this, grid_images)
 
 
-
-        return v
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
-        val button = v.findViewById<Button>(R.id.btn_test)
+        val button = binding.btnTest
+//        val button = v.findViewById<Button>(R.id.btn_test)
         button.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_movieDetailFragment)
         }

@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_movie_ticket_book_me.*
 class MovieTicketBookMeFragment : Fragment() {
 
     private lateinit var binding: FragmentMovieTicketBookMeBinding
+
     private val args by navArgs<MovieTicketBookMeFragmentArgs>()
 
     override fun onCreateView(
