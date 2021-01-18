@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.mytask1movies.ui.HomeFragment"
+        android:name="com.example.mytask1movies.ui.MovieHomeFragment"
         android:label="Movies Home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_movie_home" >
         <action
             android:id="@+id/action_homeFragment_to_movieDetailFragment"
             app:destination="@id/movieDetailFragment" />
@@ -39,4 +39,9 @@
             app:argType="string"
             android:defaultValue="Movie Title" />
     </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.mytask1movies.ui.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

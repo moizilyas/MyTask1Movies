@@ -17,7 +17,7 @@ import com.example.mytask1movies.adapters.ImageAdapter
 import com.example.mytask1movies.adapters.TimelineImageAdapter
 import com.example.mytask1movies.data.model.Image
 
-class HomeFragment : Fragment() {
+class MovieHomeFragment : Fragment() {
 
 
     lateinit var v : View
@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        v = inflater.inflate(R.layout.fragment_home, container, false)
+        v = inflater.inflate(R.layout.fragment_movie_home, container, false)
 
         val radio= v.findViewById<RadioGroup>(R.id.radioGroup)
         radio.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->

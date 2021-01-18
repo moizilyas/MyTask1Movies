@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.example.mytask1movies.ui.MovieTicketBookMeFragmentArgs
 import com.example.mytask1movies.R
+import com.example.mytask1movies.databinding.FragmentMovieTicketBookMeBinding
 import kotlinx.android.synthetic.main.fragment_movie_ticket_book_me.*
 
 
 class MovieTicketBookMeFragment : Fragment() {
 
+    private lateinit var binding: FragmentMovieTicketBookMeBinding
     private val args by navArgs<MovieTicketBookMeFragmentArgs>()
 
     override fun onCreateView(
@@ -20,11 +22,12 @@ class MovieTicketBookMeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val v : View = inflater.inflate(R.layout.fragment_movie_ticket_book_me, container, false)
+        binding = FragmentMovieTicketBookMeBinding.inflate(inflater, container, false)
+//        val v : View = inflater.inflate(R.layout.fragment_movie_ticket_book_me, container, false)
 
 
 
-        return v
+        return binding.root
 
     }
 

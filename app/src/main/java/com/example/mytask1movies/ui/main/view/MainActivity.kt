@@ -1,20 +1,25 @@
 package com.example.mytask1movies.ui.main.view
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.mytask1movies.ui.HomeFragment
 import com.example.mytask1movies.R
+import com.example.mytask1movies.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
 //    lateinit var mainfragment : HomeFragment
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        //setContentView(R.layout.activity_main)
 
         setupActionBarWithNavController(findNavController(R.id.main_fragment))
 

@@ -11,10 +11,12 @@ import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.example.mytask1movies.Details
 import com.example.mytask1movies.R
+import com.example.mytask1movies.databinding.FragmentMovieDetailBinding
 
 
 class MovieDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
+    private lateinit var binding: FragmentMovieDetailBinding
 
     lateinit var v : View
     lateinit var spinner_city : Spinner
@@ -32,11 +34,15 @@ class MovieDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.fragment_movie_detail, container, false)
 
-        movie_title = v.findViewById(R.id.title_movie_details)
+        binding = FragmentMovieDetailBinding.inflate(inflater, container, false)
+//        v = inflater.inflate(R.layout.fragment_movie_detail, container, false)
 
-        val sp = v.findViewById<Spinner>(R.id.spinner_country_movie_detail)
+        movie_title = binding.titleMovieDetails
+//        movie_title = v.findViewById(R.id.title_movie_details)
+
+        val sp = binding.spinnerCountryMovieDetail
+//        val sp = v.findViewById<Spinner>(R.id.spinner_country_movie_detail)
 
         activity?.let { ArrayAdapter(it, android.R.layout.simple_spinner_item, items).also { CityNameAdapter = it } }
 
@@ -44,7 +50,8 @@ class MovieDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
         sp!!.adapter = CityNameAdapter
 
-        spinner_city = v.findViewById(R.id.spinner_country_movie_detail)
+        spinner_city = binding.spinnerCountryMovieDetail
+//        spinner_city = v.findViewById(R.id.spinner_country_movie_detail)
 
 
 
@@ -55,7 +62,7 @@ class MovieDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
         spinner_city.onItemSelectedListener = this
 
-        return v
+        return binding.root
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -70,7 +77,8 @@ class MovieDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        val button1 = v.findViewById<Button>(R.id.cinema1_button1)
+        val button1 = binding.cinema1Button1
+//        val button1 = v.findViewById<Button>(R.id.cinema1_button1)
 
         button1.setOnClickListener{
             val city_name = city_selected
@@ -83,31 +91,36 @@ class MovieDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
             findNavController().navigate(action)
         }
 
-        val button2 = v.findViewById<Button>(R.id.cinema1_button2)
+        val button2 = binding.cinema1Button2
+//        val button2 = v.findViewById<Button>(R.id.cinema1_button2)
 
         button2.setOnClickListener{
             findNavController().navigate(R.id.action_movieDetailFragment_to_movieTicketBookMeFragment)
         }
 
-        val button3 = v.findViewById<Button>(R.id.cinema2_button1)
+        val button3 = binding.cinema2Button1
+//        val button3 = v.findViewById<Button>(R.id.cinema2_button1)
 
         button3.setOnClickListener{
             findNavController().navigate(R.id.action_movieDetailFragment_to_movieTicketBookMeFragment)
         }
 
-        val button4 = v.findViewById<Button>(R.id.cinema2_button2)
+        val button4 = binding.cinema2Button2
+//        val button4 = v.findViewById<Button>(R.id.cinema2_button2)
 
         button4.setOnClickListener{
             findNavController().navigate(R.id.action_movieDetailFragment_to_movieTicketBookMeFragment)
         }
 
-        val button5 = v.findViewById<Button>(R.id.cinema2_button3)
+        val button5 = binding.cinema2Button3
+//        val button5 = v.findViewById<Button>(R.id.cinema2_button3)
 
         button5.setOnClickListener{
             findNavController().navigate(R.id.action_movieDetailFragment_to_movieTicketBookMeFragment)
         }
 
-        val button6 = v.findViewById<Button>(R.id.cinema2_button4)
+        val button6 = binding.cinema2Button4
+//        val button6 = v.findViewById<Button>(R.id.cinema2_button4)
 
         button6.setOnClickListener{
             findNavController().navigate(R.id.action_movieDetailFragment_to_movieTicketBookMeFragment)
